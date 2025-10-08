@@ -1,0 +1,155 @@
+@use "../utils/mixins" as *;
+@use "../config" as *;
+@use "../utils/functions" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  outline: 0px;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+.heading-1 {
+  @include textStyle($primary-font-family, 28px, 32px, 0, $font-light-color);
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(32px);
+    line-height: pxToRem(40px);
+  }
+}
+
+.heading-2 {
+  @include textStyle(
+    $primary-font-family,
+    24px,
+    26px,
+    -0.5px,
+    $font-light-color
+  );
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(28px);
+    line-height: pxToRem(36px);
+  }
+}
+
+.heading-3 {
+  @include textStyle(
+    $primary-font-family,
+    20px,
+    28px,
+    -0.5px,
+    $font-light-color
+  );
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(24px);
+    line-height: pxToRem(32px);
+  }
+}
+
+.heading-4 {
+  @include textStyle($primary-font-family, 18px, 24px, 0, $font-light-color);
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(20px);
+    line-height: pxToRem(28px);
+  }
+}
+
+.heading-5 {
+  @include textStyle($primary-font-family, 16px, 24px, 0, $font-light-color);
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(18px);
+    line-height: pxToRem(24px);
+  }
+}
+
+.heading-6 {
+  @include textStyle($primary-font-family, 14px, 20px, 0, $font-light-color);
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(16px);
+    line-height: pxToRem(24px);
+  }
+}
+
+// Body text
+.body-text {
+  @include textStyle($primary-font-family, 14px, 20px, 0, #000000);
+  color-scheme: light !important;
+  @include tablet-landscape {
+    font-size: pxToRem(18px);
+    line-height: pxToRem(24px);
+  }
+  &.dark {
+    color: $font-dark-color;
+  }
+}
+
+// Content-width
+.content-width {
+  margin: 0px 10px;
+  max-width: 94.667vw;
+  /* Ensure content area maintains light scheme */
+  color-scheme: light !important;
+  @include tablet-landscape {
+    margin: 0px auto;
+    max-width: 90vw;
+    width: 100%;
+  }
+  @include wide-desktop {
+    max-width: 1230px;
+  }
+}
+
+// Default scrollbar styles
+::-webkit-scrollbar {
+  @include tablet-landscape {
+    height: 4px;
+    width: 4px;
+    background-color: #ffffff;
+    border-radius: 50px;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  @include tablet-landscape {
+    -webkit-border-radius: 50px;
+    -webkit-box-shadow: 0px 1px 2px #5897c2;
+    border-radius: 50px;
+    background-color: #5897c2;
+    cursor: pointer;
+  }
+}
+
+::-webkit-scrollbar-corner {
+  @include tablet-landscape {
+    background-color: #5897c2;
+  }
+}
