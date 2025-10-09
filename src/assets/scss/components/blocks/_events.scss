@@ -2,9 +2,9 @@
 @use "../../utils/functions" as *;
 @use "../../config" as *;
 
-.vehicle-gallery{
+.events{
   cursor: pointer;
-  .vehicle-gallery-wrap{
+  .events-wrap{
     .swiper-pagination-bullet {
       background: rgba(255, 255, 255, 0.3);
       opacity: 0.8;
@@ -15,8 +15,8 @@
         border-radius: 10px;
       }
     }
-    .vehicle-gallery-item{
-      .vehicle-gallery-item-wrap{
+    .events-item{
+      .events-item-wrap{
         display: flex;
         .image{
           width: 100%;
