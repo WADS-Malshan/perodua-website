@@ -22,9 +22,9 @@ export default function Testimonials() {
           slidesPerView={"auto"}
           loop={true}
           coverflowEffect={{
-            rotate: 0,      // 👈 rotation angle
+            rotate: 0,
             stretch: 0,
-            depth: 100,      // 👈 how deep the 3D effect looks
+            depth: 100,
             modifier: 4,
             slideShadows: true,
           }}
