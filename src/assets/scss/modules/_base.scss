@@ -101,11 +101,11 @@ h6 {
 
 // Body text
 .body-text {
-  @include textStyle($primary-font-family, 14px, 20px, 0, #000000);
+  @include textStyle($primary-font-family, 13px, 16px, 0, #000000);
   color-scheme: light !important;
   @include tablet-landscape {
-    font-size: pxToRem(18px);
-    line-height: pxToRem(24px);
+    font-size: pxToRem(15px);
+    line-height: pxToRem(20px);
   }
   &.dark {
     color: $font-dark-color;

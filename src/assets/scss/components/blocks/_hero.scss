@@ -1,0 +1,11 @@
+.hero{
+  .hero-wrap{
+    .video-wrap{
+      video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+  }
+}

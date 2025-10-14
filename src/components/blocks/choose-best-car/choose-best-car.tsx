@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { IconCircleArrowRight } from '@tabler/icons-react';
+import { IconCircleArrowRight, IconUsers } from '@tabler/icons-react';
 
 gsap.registerPlugin(Draggable);
 
@@ -198,7 +198,6 @@ export default function ChooseBestCar() {
                   </div>
                 </div>
               </div>
-
               <div className="main-vehicles-item">
                 <div className="main-vehicles-item-wrap">
                   <div className="background">
@@ -270,6 +269,38 @@ export default function ChooseBestCar() {
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="who-we-are">
+            <div className="who-we-are-wrap">
+              <div className="heading">
+                <div className="title">
+                  <h2 className="text">Who <br /> We Are</h2>
+                </div>
+                <div className="icon">
+                  <IconUsers />
+                </div>
+              </div>
+              <div className="info">
+                <div className="desc">
+                  <span className="text body-text">
+                    Established in 1993, Perodua has grown in terms of production as well as car registration, and now becoming the national car company that is leading the industry into the Electric Vehicle (EV) era.
+                  </span>
+                </div>
+                <div className="desc">
+                  <span className="text body-text">
+                    By doing so, we lead over 70,000 local workers within the automotive ecosystem into the next stage of the industry’s future.
+                  </span>
+                </div>
+                <div className="desc">
+                  <span className="text body-text">
+                    We do more than just making cars, we also develop new technologies and at the same time, train Malaysians to be self-reliance in this industry.
+                  </span>
+                </div>
+                <div className="button">
+                  <a href="#" className="btn secondary">Book Now</a>
                 </div>
               </div>
             </div>
