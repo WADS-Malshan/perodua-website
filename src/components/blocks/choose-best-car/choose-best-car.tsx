@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { IconCircleArrowRight } from '@tabler/icons-react';
 
 gsap.registerPlugin(Draggable);
 
@@ -225,7 +226,14 @@ export default function ChooseBestCar() {
                         <a href="#" className="btn secondary">Book Now</a>
                       </div>
                       <div className="more">
-                        <a href="#" className="btn secondary">More info</a>
+                        <a href="#" className="btn secondary">
+                          <div className="text">
+                            More information
+                          </div>
+                          <div className="icon">
+                            <IconCircleArrowRight />
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
