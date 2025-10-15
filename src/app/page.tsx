@@ -1,6 +1,7 @@
 import ChooseBestCar from "@/components/blocks/choose-best-car";
 import Customers from "@/components/blocks/customers";
 import Events from "@/components/blocks/events";
+import FAQ from "@/components/blocks/faq";
 import Hero from "@/components/blocks/hero";
 import Testimonials from "@/components/blocks/testimonials";
 import VehicleGallery from "@/components/blocks/vehicle-gallery";
@@ -14,6 +15,7 @@ export default function Home() {
       <Testimonials />
       <Customers />
       <Events />
+      <FAQ />
     </>
   );
 }

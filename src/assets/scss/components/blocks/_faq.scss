@@ -1,0 +1,86 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/functions" as *;
+@use "../../config" as *;
+
+.faq{
+  .faq-wrap{
+    .heading{
+        text-align: left;
+        .text{
+          background: linear-gradient(90deg, #0b3a7e, #77a7eb);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          color: transparent;
+          font-weight: bold;
+          @include textStyle($primary-font-family, 28px, 28px, 0, #afafaf);
+          @include tablet-landscape {
+            font-size: pxToRem(40px);
+            line-height: pxToRem(40px);
+          }
+        }
+      }
+    .faq-questions {
+      margin-top: 15px;
+      @include tablet-landscape {
+        margin-top: 25px;
+      }
+      .faq-questions-wrap {
+        .faq-list {
+          .faq-list-item {
+            margin-top: 15px;
+            .title-and-icon {
+              border-top: 1px solid #dddddd;
+              display: flex;
+              justify-content: space-between;
+              align-items: flex-start;
+              padding-top: 18px;
+              .title {
+                .text {
+                  font-weight:600;
+                  @include textStyle(
+                    $primary-font-family,
+                    13px,
+                    13px,
+                    0,
+                    $font-dark-color
+                  );
+                }
+              }
+              .icon {
+                display: flex;
+              }
+            }
+            .answer {
+              padding: 10px 10px 10px 0;
+              border-radius: 0 0 5px 5px;
+              @include tablet-landscape {
+                border-radius: 0 0 10px 10px;
+                padding: 12px 12px 12px 0;
+              }
+              .text {
+                margin-bottom: 8px;
+                &:last-child {
+                  margin-bottom: 0;
+                }
+                @include textStyle(
+                  $primary-font-family,
+                  13px,
+                  13px,
+                  0,
+                  $font-dark-color
+                );
+                @include tablet-landscape {
+                  margin-bottom: 12px;
+                  &:last-child {
+                    margin-bottom: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
