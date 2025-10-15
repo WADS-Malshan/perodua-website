@@ -1,0 +1,153 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/functions" as *;
+@use "../../config" as *;
+
+.footer {
+  padding: 30px 0;
+  @include tablet-landscape {
+    padding: 60px 0;
+  }
+  .footer-wrap {
+    @include tablet-landscape {
+      display: flex;
+    }
+    .footer-column {
+      &.contact {
+        @include tablet-landscape {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+      &.social {
+        @include tablet-landscape {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+      // &.links {
+      //   @include tablet-landscape {
+      //     flex: 0 0 40%;
+      //     max-width: 40%;
+      //   }
+      // }
+      .footer-column-wrap {
+        .image-wrap {
+          .image {
+            width: 300px;
+            height: auto;
+            @include tablet-landscape {
+              width: 350px;
+            }
+          }
+        }
+        .social-title {
+          @include tablet-landscape{
+            text-align: right;
+          }
+          .text {
+            @include textStyle($primary-font-family, 13px, 13px, 0, #a8a8a8);
+          }
+        }
+        .contact-list {
+          margin-top: 5px;
+          margin-bottom: 15px;
+          @include tablet-landscape {
+            margin-bottom: 0;
+          }
+          .contact-list-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            gap: 5px;
+            .icon {
+              display: flex;
+              cursor: pointer;
+              svg {
+                width: 16px;
+                height: 16px;
+                color: #000000;
+              }
+            }
+            .value {
+              .text {
+                @include textStyle(
+                  $primary-font-family,
+                  13px,
+                  13px,
+                  0,
+                  #000000
+                );
+                .link {
+                  text-decoration: none;
+                  transition: all 0.2s ease-in-out;
+                  @include textStyle(
+                    $primary-font-family,
+                    13px,
+                    13px,
+                    0,
+                    #000000
+                  );
+                  &:hover {
+                    color: #5897c2;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .social-list {
+          margin-top: 3px;
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+          gap: 5px;
+          @include tablet-landscape{
+            justify-content: end;
+          }
+          .social-list-item {
+            .link {
+              text-decoration: none;
+              .icon {
+                display: flex;
+                svg {
+                  width: 18px;
+                  height: 18px;
+                  color: #000000;
+                  @include tablet-landscape {
+                    width: 30px;
+                    height: 30px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .link-list {
+          margin-top: 3px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+          @include tablet-landscape {
+            margin-top: 8px;
+            gap: 15px;
+            justify-content: end;
+          }
+          .link-list-item {
+            cursor: pointer;
+            .text {
+              text-decoration: none;
+              text-transform: uppercase;
+              font-weight: 600;
+              @include textStyle($primary-font-family, 14px, 20px, 0, #6e6e6e);
+              transition: all 0.2s ease-in-out;
+              &:hover {
+                color: #5897c2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

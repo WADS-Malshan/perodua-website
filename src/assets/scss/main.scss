@@ -5,6 +5,9 @@
 // Modules
 @use "modules/base";
 
+// Common
+@use "common/swiper";
+
 // Components
 @use "components/blocks/vehicle-gallery";
 @use "components/blocks/events";
@@ -13,3 +16,5 @@
 @use "components/blocks/choose-best-car";
 @use "components/blocks/hero";
 @use "components/blocks/faq";
+@use "components/blocks/footer";
+@use "components/blocks/deals";

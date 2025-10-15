@@ -6,7 +6,7 @@
   position: relative;
   height: 1240px;
   @include tablet-landscape {
-    height: 1300px;
+    height: 1270px;
   }
   .choose-best-car-wrap{
     .big-title{
@@ -35,7 +35,7 @@
       @include tablet-landscape{
         top: 50%;
         left: 0;
-        transform: translateY(-32%);
+        transform: translateY(-34%);
       }
       .title{
         text-align: center;

@@ -5,6 +5,9 @@
 .vehicle-gallery{
   cursor: pointer;
   .vehicle-gallery-wrap{
+    .swiper-wrapper{
+      padding-bottom: 0;
+    }
     .swiper-pagination-bullet {
       background: rgba(255, 255, 255, 0.3);
       opacity: 0.8;

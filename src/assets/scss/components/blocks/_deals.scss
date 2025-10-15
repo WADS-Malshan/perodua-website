@@ -1,0 +1,80 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/functions" as *;
+@use "../../config" as *;
+
+.deals-list {
+  .heading{
+    .title{
+      text-align: center;
+      .text{
+        text-transform: uppercase;
+        background: linear-gradient(90deg, #0b3a7e, #77a7eb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-weight: bold;
+        @include textStyle($primary-font-family, 28px, 28px, 0, #afafaf);
+        @include tablet-landscape {
+          font-size: pxToRem(40px);
+          line-height: pxToRem(40px);
+        }
+      }
+    }
+    .desc{
+      text-align: center;
+      margin-top: 5px;
+      @include tablet-landscape{
+        margin-top: 6px;
+      }
+    }
+  }
+  .deals-list-wrap {
+    margin-top: 15px;
+    @include tablet-landscape{
+      margin-top: 20px;
+    }
+    .swiper {
+      .swiper-wrapper {
+        padding-bottom: 35px;
+      }
+      .deals-slider-controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 9999;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    .deals-list-item {
+      .deals-list-item-wrap {
+        .deal-image {
+          .image {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+          }
+        }
+        .title {
+          text-align: center;
+          margin-top: 6px;
+          @include tablet-landscape {
+            margin-top: 8px;
+          }
+          .text {
+            font-style: italic;
+            @include textStyle($primary-font-family, 14px, 20px, 0, 0C3F65);
+            @include tablet-landscape {
+              font-size: pxToRem(16px);
+              line-height: pxToRem(24px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
