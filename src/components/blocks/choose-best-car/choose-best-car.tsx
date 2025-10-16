@@ -75,7 +75,7 @@ export default function ChooseBestCar() {
     <section className="choose-best-car">
       <div className="choose-best-car-wrap">
         <div className="big-title">
-          <span className="text">CHOOSE</span>
+          <Image src="/img/choose-best-car/choose-text.png" alt="image" width={1440} height={281} className="image" />
         </div>
         <div className="content">
           <div className="title">

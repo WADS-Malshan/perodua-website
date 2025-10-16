@@ -11,19 +11,10 @@
   .choose-best-car-wrap{
     .big-title{
       position: relative;
-      text-align: center;
-      .text{
-        background: linear-gradient(180deg, #e4e4e4 40%, #ffffff 60%);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          color: transparent;
-          font-weight: bold;
-        @include textStyle($primary-font-family, 90px, 90px, 0, #afafaf);
-        @include tablet-landscape {
-          font-size: pxToRem(450px);
-          line-height: pxToRem(330px);
-        }
+      display: flex;
+      .image{
+        width: 100%;
+        height: auto;
       }
     }
     .content{

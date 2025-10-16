@@ -1,0 +1,29 @@
+@use "../../utils/mixins" as *;
+@use "../../utils/functions" as *;
+@use "../../config" as *;
+
+.about-intro{
+  .about-intro-wrap{
+    position: relative;
+    .big-title{
+      position: relative;
+      display: flex;
+      .image{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .content{
+      position: relative;
+      top: 0;
+      left: 0;
+      margin-top: -10px;
+      @include tablet-landscape{
+        margin-top: -100px; 
+      }
+      .desc{
+        text-align: center;
+      }
+    }
+  }
+}
